@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="tmw-sd-SRq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibF-oJ-TO4">
+                                <rect key="frame" x="232" y="226" width="136" height="38"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="UhB-p8-hno"/>
+                                    <constraint firstAttribute="width" constant="136" id="eYN-zL-xH8"/>
+                                </constraints>
+                                <state key="normal" title="无动画关闭">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="exitApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJb-gn-rip"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbe-DZ-7RJ">
+                                <rect key="frame" x="232" y="303" width="136" height="38"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="cZb-c8-dO3"/>
+                                    <constraint firstAttribute="height" constant="38" id="oIX-9b-tOa"/>
+                                </constraints>
+                                <state key="normal" title="带过渡动画关闭">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="exitAppWithTransitionAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Qk-kT-uJr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ibF-oJ-TO4" firstAttribute="centerX" secondItem="tmw-sd-SRq" secondAttribute="centerX" id="8bQ-5t-kXz"/>
+                            <constraint firstItem="tmw-sd-SRq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="EEG-fW-Q0N"/>
+                            <constraint firstItem="Tbe-DZ-7RJ" firstAttribute="top" secondItem="ibF-oJ-TO4" secondAttribute="bottom" constant="39" id="MPR-ni-nui"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tmw-sd-SRq" secondAttribute="bottom" id="b4q-YM-BQm"/>
+                            <constraint firstItem="tmw-sd-SRq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="dXx-v1-37R"/>
+                            <constraint firstItem="tmw-sd-SRq" firstAttribute="top" secondItem="ibF-oJ-TO4" secondAttribute="bottom" constant="-264" id="esS-6y-pBr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tmw-sd-SRq" secondAttribute="trailing" constant="-20" id="ltT-F9-1Qq"/>
+                            <constraint firstItem="Tbe-DZ-7RJ" firstAttribute="centerX" secondItem="tmw-sd-SRq" secondAttribute="centerX" id="zR6-QZ-cBG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="475"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.jpeg" width="1200" height="2131"/>
+    </resources>
+</document>
